@@ -346,7 +346,7 @@ function renderPromo(status) {
       </p>
       <a
         class="promo__btn"
-        href="https://instagram.com"
+        href="https://www.instagram.com/barkanddine"
         target="_blank"
         rel="noopener noreferrer"
       >See our menu →</a>
