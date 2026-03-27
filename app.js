@@ -164,6 +164,48 @@ const DB = [
       "Ice cream is high in sugar and fat, and many dogs don’t tolerate lactose well. Chocolate or xylitol-containing varieties are especially dangerous—skip it or use dog-safe frozen treats instead."
   },
   {
+    name: "Coconut milk",
+    status: "caution",
+    explanation:
+      "Fine in very small amounts, but high fat content can upset digestion and may increase pancreatitis risk in sensitive dogs."
+  },
+  {
+    name: "Turkey (plain, cooked)",
+    status: "good",
+    explanation:
+      "Lean protein and generally great for dogs when served plain, fully cooked, and without bones, skin, or heavy seasoning."
+  },
+  {
+    name: "Sweet potato (plain, cooked)",
+    status: "good",
+    explanation:
+      "Rich in fibre and vitamins, and usually dog-safe when cooked plain and served in moderate portions."
+  },
+  {
+    name: "Pumpkin (plain)",
+    status: "good",
+    explanation:
+      "Excellent for digestion and often used to help with mild stool issues when served plain (not spiced pie filling)."
+  },
+  {
+    name: "Turmeric",
+    status: "caution",
+    explanation:
+      "May offer anti-inflammatory benefits, but use sparingly and with a little ground black pepper for absorption."
+  },
+  {
+    name: "Cinnamon",
+    status: "caution",
+    explanation:
+      "Small amounts only; larger quantities can irritate the mouth and stomach."
+  },
+  {
+    name: "Nutmeg",
+    status: "toxic",
+    explanation:
+      "Contains myristicin, which is toxic to dogs and can affect the nervous system."
+  },
+  {
     name: "Popcorn (plain, air-popped)",
     status: "caution",
     explanation:
@@ -213,7 +255,13 @@ const ALIASES = new Map([
   ["egg", "eggs (cooked)"],
   ["salmon", "salmon (cooked)"],
   ["chicken", "chicken (plain, cooked)"],
-  ["rice", "rice (plain, cooked)"]
+  ["rice", "rice (plain, cooked)"],
+  ["banana", "bananas"],
+  ["turkey", "turkey (plain, cooked)"],
+  ["sweet potato", "sweet potato (plain, cooked)"],
+  ["sweet potatoes", "sweet potato (plain, cooked)"],
+  ["pumpkin", "pumpkin (plain)"],
+  ["coconut milk", "coconut milk"]
 ]);
 
 function norm(s) {
@@ -283,8 +331,26 @@ function renderResult(item) {
       </div>
       <div class="card__body">
         <p>${escapeHtml(item.explanation)}</p>
+        ${renderPromo(item.status)}
       </div>
     </article>
+  `;
+}
+
+function renderPromo(status) {
+  if (status !== "good" && status !== "caution") return "";
+  return `
+    <div class="promo">
+      <p class="promo__text">
+        Want to feed your dog something chef-made? Bark & Dine delivers fresh, vet-conscious dog meals in Dubai
+      </p>
+      <a
+        class="promo__btn"
+        href="https://instagram.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >See our menu →</a>
+    </div>
   `;
 }
 
@@ -299,14 +365,12 @@ function escapeHtml(s) {
 
 function buildChips() {
   const picks = [
+    "Chicken",
+    "Banana",
     "Grapes",
     "Chocolate",
-    "Peanut butter",
-    "Chicken (plain, cooked)",
-    "Onion",
-    "Carrots",
-    "Xylitol",
-    "Watermelon (seedless)"
+    "Sweet potato",
+    "Pumpkin"
   ];
   const chips = document.getElementById("chips");
   chips.innerHTML = picks
