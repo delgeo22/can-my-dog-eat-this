@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0f14" />
+    <title>Can my dog eat this?</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app" aria-label="Can my dog eat this?">
+      <header class="header">
+        <div class="brand">
+          <div class="brand__mark" aria-hidden="true">🐾</div>
+          <div class="brand__text">
+            <h1 class="brand__title">Can my dog eat this?</h1>
+            <p class="brand__subtitle">Search a food for quick guidance.</p>
+          </div>
+        </div>
+
+        <form class="search" id="searchForm" autocomplete="off">
+          <label class="search__label" for="q">Food</label>
+          <div class="search__row">
+            <input
+              id="q"
+              name="q"
+              class="search__input"
+              inputmode="search"
+              enterkeyhint="search"
+              placeholder="Try: grapes, peanut butter, chicken..."
+              aria-describedby="searchHelp"
+              autofocus
+            />
+            <button class="search__clear" type="button" id="clearBtn" aria-label="Clear search">
+              Clear
+            </button>
+          </div>
+          <p class="search__help" id="searchHelp">
+            Type a food name. Matching is best-effort (e.g., “pb” → “peanut butter”).
+          </p>
+        </form>
+      </header>
+
+      <section class="content" aria-live="polite" aria-atomic="true">
+        <div id="result" class="result"></div>
+
+        <div class="tips" id="tips">
+          <div class="tips__card">
+            <h2 class="tips__title">Popular searches</h2>
+            <div class="chips" id="chips" aria-label="Popular foods"></div>
+          </div>
+          <p class="disclaimer">
+            This is general information, not veterinary advice. If your dog ate something toxic (or you’re not sure),
+            contact your vet or a pet poison helpline right away.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
