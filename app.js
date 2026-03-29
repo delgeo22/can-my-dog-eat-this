@@ -6,7 +6,7 @@ const USER_ADDED_FOODS_RAW = String.raw`
 "Blueberries"/dog friendly, "Blueberries" are a superfood, they're loaded with antioxidants, fibre and vitamin C. They support brain health and fight cell damage.
 "Greek yogurt"/dog friendly with caution, "Greek yogurt" is a great source of protein and calcium for dogs. However, it should be given in moderation and can cause digestive issues if given in large quantities. Avoid if the dog is lactose intolerance. Always ensure it is plain and low fat with no added sugar.
 "Coconut oil"/dog friendly with caution, "Coconut oil" is a great source of healthy fats and for teeth cleaning. However, it should be given in small doses and good to use in cooking. Also great applied to the skin and hair especially for any irritated areas. 
-"Carrots"/dog friendly, "Carrots" are rich in fibre and vitamin KeyboardEvent. Great for supporting overall health and make a natural alternative to dental sticks.
+"Carrots"/dog friendly, Carrots are rich in fibre and vitamin K. Great for supporting overall health and make a natural alternative to dental sticks.
 "Eggs"/dog friendly, "Eggs" are a proteing powerhouse filled with amino acids and healthy fats. Quail, duck or chicken eggs are safest choices. Best served cooked, raw can be fed but not ideal for dogs who have a sensitive stomach or not accustomed to raw foods.
 "Salmon"/dog friendly, "Salmon" is a great source of omega-3 fatty acids and protein for dogs. It is a great source of vitamins and minerals. However, it should be given in moderation as it is high in calories.
 "Honey"/dog friendly with caution, "Honey" is a great source of antioxidants and vitamins for dogs. However, it should be given in moderation as it is high in sugar. 
@@ -16,7 +16,7 @@ const USER_ADDED_FOODS_RAW = String.raw`
 "Watermelon"/dog friendly, "Watermelon" is a great source of water and vitamin C for dogs. Seeds are toxic to dogs.
 "Bell peppers"/dog friendly, "Bell peppers" are a great source of vitamin A, C and E. It is a great source of vitamins and minerals. Perfect to fill with dog safe treats and freeze for a cooling natural treat.
 "Courgettes/Marrow"/dog friendly, "Courgettes/Marrow" are a perfect low calorie, fibre rich food high in vitamin C and potassium. Best served cooked for sensitive tummies.
-"Green beans"/dog friendly, "Green beans" are fibre rich and filled with vitamins A, C and LargestContentfulPaint. Serve cooked and finely chopped.
+"Green beans"/dog friendly, Green beans are fibre rich and filled with vitamins A, C and K. Serve cooked and finely chopped.
 "Cashews"/dog friendly with caution, "Cashews" can be fed in small doses sparingly. Ensure they are unsalted and unflavoured.
 "White fish"/dog friendly, "White fish" is a great low-fat high protein source with lots of omega-3. Serve plain or with dog friendly seasoning and ensure there are no bones. Great for upset tummies.
 "Milk"/dog friendly, "Milk" whilst generally dog friendly for those without a lactose allergy, goat's milk is best to serve as it's more gentle.
@@ -215,7 +215,7 @@ const BASE_DB = [
     name: "Carrots",
     status: "good",
     explanation:
-      "Carrots are dog-friendly and can be served raw or cooked as a crunchy, low-calorie snack. Cut into appropriate sizes to reduce choking risk, especially for small dogs."
+      "Carrots are rich in fibre and vitamin K. Great for supporting overall health and make a natural alternative to dental sticks."
   },
   {
     name: "Apples (no seeds)",
