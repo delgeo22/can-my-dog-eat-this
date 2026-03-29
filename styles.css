@@ -1,27 +1,27 @@
 :root{
-  --bg:#0b0f14;
-  --panel:#101723;
-  --panel2:#0f1622;
-  --text:#e9eef6;
-  --muted:#a8b3c5;
-  --border:rgba(255,255,255,.10);
-  --shadow: 0 18px 50px rgba(0,0,0,.55);
-  --primary:#1D9E75;
+  --bg:#f1e4d1;
+  --surface:#ffffff;
+  --surface-cream:#fffef9;
+  --text:#162660;
+  --muted:rgba(22,38,96,.72);
+  --border:rgba(22,38,96,.14);
+  --shadow:0 12px 40px rgba(22,38,96,.10);
 
-  --good:#1D9E75;
-  --caution:#ffb020;
-  --toxic:#ff4d57;
+  --primary:#d3622c;
+  --chip-bg:#f0c845;
+  --chip-text:#162660;
+  --cta:#f89e29;
+
+  --card-safe-bg:#dcefe2;
+  --card-caution-bg:#ffeda6;
+  --card-toxic-bg:#fde0e0;
 }
 
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
 body{
   margin:0;
-  background:
-    radial-gradient(1200px 600px at 20% 10%, rgba(29,158,117,.22), transparent 60%),
-    radial-gradient(900px 480px at 85% 25%, rgba(255,176,32,.14), transparent 55%),
-    radial-gradient(900px 520px at 70% 90%, rgba(255,77,87,.10), transparent 55%),
-    var(--bg);
+  background:var(--bg);
   color:var(--text);
   font: 16px/1.35 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
@@ -38,7 +38,7 @@ body{
   z-index: 10;
   padding: 14px 0 12px;
   backdrop-filter: blur(10px);
-  background: linear-gradient(to bottom, rgba(11,15,20,.92), rgba(11,15,20,.72));
+  background: linear-gradient(to bottom, rgba(241,228,209,.96), rgba(241,228,209,.88));
 }
 
 .brand{
@@ -51,16 +51,17 @@ body{
   width:40px;
   height:40px;
   border-radius: 12px;
-  background: rgba(255,255,255,.07);
+  background: var(--surface);
   border: 1px solid var(--border);
   display:grid;
   place-items:center;
-  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+  box-shadow: var(--shadow);
 }
 .brand__title{
   margin:0;
   font-size: 22px;
   letter-spacing: -.02em;
+  color: var(--text);
 }
 .brand__subtitle{
   margin: 2px 0 0;
@@ -69,7 +70,7 @@ body{
 }
 
 .search{
-  background: rgba(16,23,35,.70);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 12px;
@@ -78,8 +79,9 @@ body{
 .search__label{
   display:block;
   font-size: 12px;
-  color: var(--muted);
+  color: var(--text);
   margin: 0 0 8px;
+  font-weight: 600;
 }
 .search__row{
   display:flex;
@@ -90,18 +92,18 @@ body{
   height: 46px;
   padding: 0 14px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(12,17,25,.65);
+  border: 1px solid var(--border);
+  background: var(--surface-cream);
   color: var(--text);
   outline: none;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+  box-shadow: inset 0 1px 0 rgba(22,38,96,.04);
 }
-.search__input::placeholder{ color: rgba(168,179,197,.72); }
+.search__input::placeholder{ color: var(--muted); }
 .search__input:focus{
-  border-color: rgba(255,255,255,.22);
+  border-color: var(--primary);
   box-shadow:
-    0 0 0 3px rgba(255,255,255,.08),
-    inset 0 1px 0 rgba(255,255,255,.05);
+    0 0 0 3px rgba(211,98,44,.20),
+    inset 0 1px 0 rgba(22,38,96,.04);
 }
 .search__clear{
   height: 46px;
@@ -111,6 +113,7 @@ body{
   background: var(--primary);
   color: #ffffff;
   cursor:pointer;
+  font-weight: 600;
 }
 .search__clear:active{ transform: translateY(1px); }
 .search__help{
@@ -128,9 +131,10 @@ body{
 .card{
   border-radius: 18px;
   border: 1px solid var(--border);
-  background: rgba(16,23,35,.68);
+  background: var(--surface);
   box-shadow: var(--shadow);
   overflow:hidden;
+  color: var(--text);
 }
 .card__top{
   padding: 16px 16px 14px;
@@ -143,6 +147,7 @@ body{
   margin:0;
   font-size: 18px;
   letter-spacing: -.01em;
+  color: var(--text);
 }
 .badge{
   display:inline-flex;
@@ -151,55 +156,73 @@ body{
   border-radius: 999px;
   padding: 7px 10px;
   font-size: 12px;
-  border: 1px solid rgba(255,255,255,.16);
-  background: rgba(255,255,255,.06);
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #ffffff;
   white-space:nowrap;
+  font-weight: 600;
 }
 .badge__dot{
   width:10px;
   height:10px;
   border-radius: 999px;
-  background: currentColor;
-  box-shadow: 0 0 0 3px rgba(0,0,0,.18);
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255,255,255,.35);
 }
 .card__body{
   padding: 0 16px 16px;
-  color: rgba(233,238,246,.92);
+  color: var(--text);
 }
 .card__body p{
   margin: 8px 0 0;
-  color: rgba(233,238,246,.88);
+  color: var(--text);
 }
 
 .state{
   border-left: 6px solid transparent;
 }
-.state--good{ border-left-color: rgba(29,223,147,.90); }
-.state--caution{ border-left-color: rgba(255,176,32,.90); }
-.state--toxic{ border-left-color: rgba(255,77,87,.90); }
+.state--good{
+  background: var(--card-safe-bg);
+  border-left-color: var(--primary);
+}
+.state--caution{
+  background: var(--card-caution-bg);
+  border-left-color: var(--primary);
+}
+.state--toxic{
+  background: var(--card-toxic-bg);
+  border-left-color: var(--primary);
+}
 
-.badge--good{ color: var(--good); }
-.badge--caution{ color: var(--caution); }
-.badge--toxic{ color: var(--toxic); }
+.badge--good,
+.badge--caution,
+.badge--toxic{
+  color: #ffffff;
+  background: var(--primary);
+  border-color: var(--primary);
+}
 
 .empty{
-  border: 1px dashed rgba(255,255,255,.18);
+  border: 1px dashed var(--border);
   border-radius: 18px;
   padding: 16px;
-  color: var(--muted);
+  color: var(--text);
+  background: var(--surface);
+  box-shadow: var(--shadow);
 }
 
 .tips{ margin-top: 14px; }
 .tips__card{
   border-radius: 18px;
   border: 1px solid var(--border);
-  background: rgba(16,23,35,.55);
+  background: var(--surface);
   padding: 14px;
+  box-shadow: var(--shadow);
 }
 .tips__title{
   margin:0 0 10px;
   font-size: 13px;
-  color: rgba(233,238,246,.88);
+  color: var(--text);
   font-weight: 600;
 }
 .chips{
@@ -208,17 +231,18 @@ body{
   gap: 10px;
 }
 .chip{
-  border: 1px solid rgba(29,158,117,.65);
-  background: rgba(29,158,117,.16);
-  color: rgba(233,238,246,.98);
+  border: 1px solid rgba(22,38,96,.12);
+  background: var(--chip-bg);
+  color: var(--chip-text);
   padding: 8px 10px;
   border-radius: 999px;
   font-size: 13px;
+  font-weight: 600;
   cursor:pointer;
 }
 .chip:hover{
-  border-color: rgba(29,158,117,.90);
-  background: rgba(29,158,117,.28);
+  filter: brightness(0.97);
+  border-color: rgba(22,38,96,.22);
 }
 .chip:active{ transform: translateY(1px); }
 
@@ -230,24 +254,24 @@ body{
 .promo__text{
   margin: 0 0 10px;
   font-size: 13px;
-  color: rgba(233,238,246,.9);
+  color: var(--text);
 }
 .promo__btn{
   display:inline-block;
   text-decoration:none;
-  background: var(--primary);
-  border: 1px solid var(--primary);
+  background: var(--cta);
+  border: 1px solid var(--cta);
   color: #ffffff;
   border-radius: 10px;
   padding: 9px 12px;
   font-size: 13px;
   font-weight: 600;
 }
-.promo__btn:hover{ filter: brightness(1.05); }
+.promo__btn:hover{ filter: brightness(1.03); }
 
 .disclaimer{
   margin: 12px 2px 0;
-  color: rgba(29,158,117,.78);
+  color: var(--text);
   font-size: 13px;
   line-height: 1.45;
 }
