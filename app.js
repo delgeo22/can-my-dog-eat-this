@@ -7,7 +7,7 @@ const USER_ADDED_FOODS_RAW = String.raw`
 "Greek yogurt"/dog friendly with caution, "Greek yogurt" is a great source of protein and calcium for dogs. However, it should be given in moderation and can cause digestive issues if given in large quantities. Avoid if the dog is lactose intolerance. Always ensure it is plain and low fat with no added sugar.
 "Coconut oil"/dog friendly with caution, "Coconut oil" is a great source of healthy fats and for teeth cleaning. However, it should be given in small doses and good to use in cooking. Also great applied to the skin and hair especially for any irritated areas. 
 "Carrots"/dog friendly, Carrots are rich in fibre and vitamin K. Great for supporting overall health and make a natural alternative to dental sticks.
-"Eggs"/dog friendly, "Eggs" are a proteing powerhouse filled with amino acids and healthy fats. Quail, duck or chicken eggs are safest choices. Best served cooked, raw can be fed but not ideal for dogs who have a sensitive stomach or not accustomed to raw foods.
+"Eggs"/dog friendly, "Eggs" are a protein powerhouse filled with amino acids and healthy fats. Quail, duck or chicken eggs are safest choices. Best served cooked, raw can be fed but not ideal for dogs who have a sensitive stomach or not accustomed to raw foods.
 "Salmon"/dog friendly, "Salmon" is a great source of omega-3 fatty acids and protein for dogs. It is a great source of vitamins and minerals. However, it should be given in moderation as it is high in calories.
 "Honey"/dog friendly with caution, "Honey" is a great source of antioxidants and vitamins for dogs. However, it should be given in moderation as it is high in sugar. 
 "Pineapple"/dog friendly, "Pineapple" is a great source of vitamin C and fibre for dogs. It is a great source of vitamins and minerals. However, it should be given in moderation as it is high in sugar. 
@@ -485,9 +485,25 @@ function renderResult(item) {
       </div>
       <div class="card__body">
         <p>${escapeHtml(item.explanation)}</p>
+        ${renderEmergencyAlert(item.status)}
         ${renderPromo(item.status)}
       </div>
     </article>
+  `;
+}
+
+function renderEmergencyAlert(status) {
+  if (status !== "toxic") return "";
+  return `
+    <div class="emergency-alert" role="alert">
+      <p class="emergency-alert__text">If your dog has eaten this, contact your vet immediately.</p>
+      <a
+        class="emergency-alert__btn"
+        href="https://www.google.com/search?q=emergency+vet+Dubai"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Find an emergency vet in Dubai</a>
+    </div>
   `;
 }
 
