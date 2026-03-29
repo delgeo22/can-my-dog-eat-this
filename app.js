@@ -1,34 +1,32 @@
 const USER_ADDED_FOODS_RAW = String.raw`
 "Kefir"/dog friendly, "Kefir" is a fermented milk product that is rich in probiotics and vitamins. It is a great source of protein and calcium for dogs. Ensure only plain kefir is given to dogs. 
-/* Minimal, dependency-free SPA logic */"Cheese"/friendly with caution, "Cheese" is a great source of protein and calcium for dogs. However, it should be given in moderation as it is high in calories and can cause digestive issues if given in large quantities. "Cheese" should be given in small quantities and should be avoided if the dog has a lactose intolerance.
+/* Minimal, dependency-free SPA logic */"Cheese"/friendly with caution, "Cheese" is a great source of protein and calcium for dogs. However, it should be given in moderation as it is high in calories and can cause digestive issues if given in large quantities. Cheese should be given in small quantities and should be avoided if the dog has a lactose intolerance.
 "Mangoes"/friendly with caution, Mangoes are a great source of vitamin C and fibre for dogs. However, they should be given in moderation as they are high in sugar and can cause digestive issues if given in large quantities.
-"Apples"/dog friendly, "Apples" are a great source of fibre and vitamin C for dogs. They are great for keeping their breath fresh and their teeth clean. However, they should be given in moderation as they are high in sugar and can cause digestive issues if given in large quantities. "Apples" should be given in small quantities and should be avoided if the dog has a sensitive stomach.
+"Apples"/dog friendly, "Apples" are a great source of fibre and vitamin C for dogs. They are great for keeping their breath fresh and their teeth clean. However, they should be given in moderation as they are high in sugar and can cause digestive issues if given in large quantities. Apples should be given in small quantities and should be avoided if the dog has a sensitive stomach.
 "Blueberries"/dog friendly, "Blueberries" are a superfood, they're loaded with antioxidants, fibre and vitamin C. They support brain health and fight cell damage.
 "Greek yogurt"/dog friendly with caution, "Greek yogurt" is a great source of protein and calcium for dogs. However, it should be given in moderation and can cause digestive issues if given in large quantities. Avoid if the dog is lactose intolerance. Always ensure it is plain and low fat with no added sugar.
 "Coconut oil"/dog friendly with caution, "Coconut oil" is a great source of healthy fats and for teeth cleaning. However, it should be given in small doses and good to use in cooking. Also great applied to the skin and hair especially for any irritated areas. 
 "Carrots"/dog friendly, Carrots are rich in fibre and vitamin K. Great for supporting overall health and make a natural alternative to dental sticks.
-"Eggs"/dog friendly, "Eggs" are a protein powerhouse filled with amino acids and healthy fats. Quail, duck or chicken eggs are safest choices. Best served cooked, raw can be fed but not ideal for dogs who have a sensitive stomach or not accustomed to raw foods.
-"Salmon"/dog friendly, "Salmon" is a great source of omega-3 fatty acids and protein for dogs. It is a great source of vitamins and minerals. However, it should be given in moderation as it is high in calories.
+"Eggs"/dog friendly, Eggs are a protein powerhouse filled with amino acids and healthy fats. Quail, duck or chicken eggs are safest choices. Best served cooked, raw can be fed but not ideal for dogs who have a sensitive stomach or not accustomed to raw foods.
 "Honey"/dog friendly with caution, "Honey" is a great source of antioxidants and vitamins for dogs. However, it should be given in moderation as it is high in sugar. 
 "Pineapple"/dog friendly, "Pineapple" is a great source of vitamin C and fibre for dogs. It is a great source of vitamins and minerals. However, it should be given in moderation as it is high in sugar. 
 "Papaya"/dog friendly, "Papaya" is a great source of vitamin C and fibre for dogs. It is a great source of vitamins and minerals. However, it should be given in moderation as it is high in sugar. 
-"Strawberries"/dog friendly, "Strawberries" are a great source of vitamin C and fibre for dogs. It is a great source of vitamins and minerals. However, it should be given in moderation as it is high in sugar. 
-"Watermelon"/dog friendly, "Watermelon" is a great source of water and vitamin C for dogs. Seeds are toxic to dogs.
+"Strawberries"/dog friendly, Strawberries are a great source of vitamin C and fibre for dogs and an easy way to keep them hydrated.
 "Bell peppers"/dog friendly, "Bell peppers" are a great source of vitamin A, C and E. It is a great source of vitamins and minerals. Perfect to fill with dog safe treats and freeze for a cooling natural treat.
 "Courgettes/Marrow"/dog friendly, "Courgettes/Marrow" are a perfect low calorie, fibre rich food high in vitamin C and potassium. Best served cooked for sensitive tummies.
 "Green beans"/dog friendly, Green beans are fibre rich and filled with vitamins A, C and K. Serve cooked and finely chopped.
 "Cashews"/dog friendly with caution, "Cashews" can be fed in small doses sparingly. Ensure they are unsalted and unflavoured.
 "White fish"/dog friendly, "White fish" is a great low-fat high protein source with lots of omega-3. Serve plain or with dog friendly seasoning and ensure there are no bones. Great for upset tummies.
-"Milk"/dog friendly, "Milk" whilst generally dog friendly for those without a lactose allergy, goat's milk is best to serve as it's more gentle.
+"Milk"/dog friendly, Whilst generally dog friendly for those without a lactose allergy, goat's milk is best to serve as it's more easily digestible.
 "Peanut butter"/dog friendly with caution, "Peanut butter" is a tasty safe treat high in protein but also high in fat. Serve sparingly and ensure it is plain unsalted with no added oils or xylitol.
-"Popcorn"/dog friendly with caution, Unsalted, unbuttered, air-popped "Popcorn" is ok in moderation. Be sure to pop the kernels all the way before serving.
-"Tuna"/dog friendly with caution, Dogs can eat "tuna", but only in small amounts. In moderation, cooked, fresh tuna is an excellent source of omega-3 fatty acids, which promote heart and eye health. As for canned tuna, it contains small amounts of mercury and sodium, which should be avoided in excess. A little bit of canned tuna and tuna juice here and there is fine — prepared only in water, not oil — as long as it doesn't contain any spices.
-"Turkey"/dog friendly, great alternative for those with chicken allergy. Remove excess skin and fat before serving and ensure there are no bones.
+"Popcorn"/dog friendly with caution, Unsalted, unbuttered, air-popped Popcorn is ok in moderation. Be sure to pop the kernels all the way before serving.
+"Tuna"/dog friendly with caution, Dogs can eat tuna, but only in small amounts. In moderation, cooked, fresh tuna is an excellent source of omega-3 fatty acids, which promote heart and eye health. As for canned tuna, it contains small amounts of mercury and sodium, which should be avoided in excess. A little bit of canned tuna and tuna juice here and there is fine — prepared only in water, not oil — as long as it doesn't contain any spices.
+"Turkey"/dog friendly, Great alternative for those with a chicken allergy. Remove excess skin and fat before serving and ensure there are no bones.
 "Macadamia Nuts"/toxic, "Macadamia nuts" are extremely poisonous foods for dogs. They can cause vomiting, increased body temperature, inability to walk and lethargy. 
 "Cranberries"/dog friendly, Fresh "Cranberries" are best, especially cooked in water. 
 "Oats or Oatmeal"/dog friendly, Great source of fibre, serve cooked only.
-"Rice"/dog friendly, Plain cooked white "Rice" can be great for upset stomachs to use within a gastro diet.
-"Beef"/dog friendly, Lean "Beef" is a high quality protein choice with amino acids and B vitamins.
+"Rice"/dog friendly, Plain cooked white Rice can be great for upset stomachs to use within a gastro diet.
+"Beef"/dog friendly, Lean Beef is a high quality protein choice with amino acids and B vitamins.
 "Cauliflower"/dog friendly, "Cauliflower" is great source of fiber, vitamin C, and vitamin K. It supports digestion and the immune system, though it should be served in moderation to avoid gas.
 "Dates"/dog friendly with caution, While they provide fibre and vitamins, they are very high in natural sugar and should only be given as an occasional treat. The pits must be removed as they are a choking hazard and can cause intestinal blockages.
 "Camel"/dog friendly: An excellent, lean novel protein that is often hypoallergenic. It is high in protein and lower in fat than beef, making it ideal for dogs with common food sensitivities or weight management needs.
@@ -200,12 +198,6 @@ const BASE_DB = [
       "Plain cooked rice is usually gentle on a dog’s stomach and is often paired with lean protein for short-term upset tummies. Keep portions modest to avoid excess calories."
   },
   {
-    name: "Salmon (cooked)",
-    status: "good",
-    explanation:
-      "Cooked salmon is generally safe and provides protein and omega-3 fats. Serve it plain and fully cooked—raw salmon can carry parasites that make dogs sick."
-  },
-  {
     name: "Eggs (cooked)",
     status: "good",
     explanation:
@@ -216,12 +208,6 @@ const BASE_DB = [
     status: "good",
     explanation:
       "Carrots are rich in fibre and vitamin K. Great for supporting overall health and make a natural alternative to dental sticks."
-  },
-  {
-    name: "Apples (no seeds)",
-    status: "good",
-    explanation:
-      "Apple slices are generally safe for dogs and can be a refreshing treat. Remove the core and seeds, since seeds contain compounds that can be harmful if eaten in quantity."
   },
   {
     name: "Bananas",
@@ -240,12 +226,6 @@ const BASE_DB = [
     status: "good",
     explanation:
       "Strawberries are generally safe for dogs and can be served fresh or frozen. Wash them well and avoid sugary syrups or whipped toppings."
-  },
-  {
-    name: "Watermelon (seedless)",
-    status: "good",
-    explanation:
-      "Seedless, rind-free watermelon is usually safe and hydrating for dogs. Too much can cause diarrhea, so keep it as a treat."
   },
   {
     name: "Grapefruit",
