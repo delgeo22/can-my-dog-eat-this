@@ -357,7 +357,10 @@ function dedupeFoods(items) {
   return out;
 }
 
-const DB = dedupeFoods([...ADDED_FOODS, ...BASE_DB]);
+const DB = dedupeFoods([...ADDED_FOODS, ...BASE_DB]).map((item) => ({
+  ...item,
+  explanation: stripLeadingQuotedFoodName(item.explanation, item.name)
+}));
 
 const STATUS_META = {
   good: { label: "Dog friendly", cls: "good" },
@@ -405,6 +408,23 @@ function norm(s) {
     .replace(/[’']/g, "")
     .replace(/[^a-z0-9\s()-]/g, " ")
     .replace(/\s+/g, " ");
+}
+
+function stripLeadingQuotedFoodName(explanation, name) {
+  const text = String(explanation || "").trim();
+  const match = text.match(/^"([^"]+)"(\s+.*|$)/);
+  if (!match) return text;
+
+  const quotedName = match[1].trim();
+  const rest = match[2] || "";
+  const quotedNorm = norm(quotedName);
+  const nameNorm = norm(name);
+
+  if (quotedNorm === nameNorm || quotedNorm.includes(nameNorm) || nameNorm.includes(quotedNorm)) {
+    return `${quotedName}${rest}`.trim();
+  }
+
+  return text;
 }
 
 function bestMatch(query) {
