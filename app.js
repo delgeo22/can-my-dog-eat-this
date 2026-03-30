@@ -328,6 +328,66 @@ const BASE_DB = [
     status: "toxic",
     explanation:
       "Many sugar-free gums contain xylitol, which is extremely dangerous for dogs. If gum was eaten, assume xylitol exposure until proven otherwise and contact a vet immediately."
+  },
+  {
+    name: "Lobster",
+    status: "caution",
+    explanation:
+      "A great source of protein, omega-3 fatty acids and zinc, but Lobster is very high in sodium and cholesterol. It must be fully cooked, served plain and all shell fragments removed to prevent choking or internal punctures."
+  },
+  {
+    name: "Caviar",
+    status: "toxic",
+    explanation:
+      "While it may seem like a luxury treat, Caviar is dangerously high in salt and fats, which can lead to salt poisoning or trigger acute pancreatitis in dogs."
+  },
+  {
+    name: "Passion Fruit",
+    status: "caution",
+    explanation:
+      "The flesh of Passion Fruit is safe and nutrient-dense, but the seeds contain cyanide and the skin is indigestible. Because the seeds are so difficult to separate from the pulp, it is often best avoided."
+  },
+  {
+    name: "Guava",
+    status: "good",
+    explanation:
+      "This tropical fruit is packed with vitamins C and A and fibre, making it a healthy snack. Ensure it is served in bite-sized pieces and in moderation due to the sugar content."
+  },
+  {
+    name: "Lychee",
+    status: "caution",
+    explanation:
+      "The soft flesh is safe and provides a burst of hydration and antioxidants, but the skin and the large seed must be removed as they contain toxins that can cause a dangerous drop in blood sugar."
+  },
+  {
+    name: "Lettuce",
+    status: "good",
+    explanation:
+      "Composed mostly of water, lettuce is a low-calorie, hydrating snack that adds extra fibre to a diet. It is best served chopped to make it easier for dogs to digest."
+  },
+  {
+    name: "Tomato",
+    status: "caution",
+    explanation:
+      "Ripe, red Tomato flesh is generally safe in small amounts, but the green parts of the plant and unripened fruit contain solanine, which is toxic to dogs."
+  },
+  {
+    name: "Radish",
+    status: "good",
+    explanation:
+      "A crunchy, low-calorie vegetable that can help remove plaque from teeth. While Radish is safe and provides roughage, some dogs may find the peppery flavour a bit too intense."
+  },
+  {
+    name: "Cherry",
+    status: "toxic",
+    explanation:
+      "Beyond being a major choking hazard, Cherry pits, stems, and leaves contain cyanide. Even a few pits can cause respiratory distress or intestinal blockages."
+  },
+  {
+    name: "Lentils",
+    status: "caution",
+    explanation:
+      "A nutrient-dense source of plant-based protein, iron and fibre. Lentils must be thoroughly cooked and served plain to be digestible and should be avoided for dogs prone to gas or bloat."
   }
 ];
 
