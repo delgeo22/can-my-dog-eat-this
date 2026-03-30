@@ -136,18 +136,37 @@ body{
   overflow:hidden;
   color: var(--text);
 }
-.card__top{
-  padding: 16px 16px 14px;
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:12px;
+.card__banner{
+  width: 100%;
+  padding: 14px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: transparent; /* set by .state--* rules */
 }
-.food{
-  margin:0;
-  font-size: 18px;
+.card__banner-label{
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+.card__banner-food{
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 800;
   letter-spacing: -.01em;
-  color: var(--text);
+  line-height: 1.1;
+}
+
+.card__body{
+  padding: 16px;
+  background: #faf6f0;
+  color: #162660;
+}
+.card__description{
+  margin: 0;
+  color: #162660;
 }
 .badge{
   display:inline-flex;
@@ -169,30 +188,27 @@ body{
   background: #ffffff;
   box-shadow: 0 0 0 2px rgba(255,255,255,.35);
 }
-.card__body{
-  padding: 0 16px 16px;
-  color: var(--text);
-}
-.card__body p{
-  margin: 8px 0 0;
-  color: var(--text);
+.badge{
+  /* Legacy styles (banner redesign removed the badge from result cards) */
+  display:none;
 }
 
 .state{
-  border-left: 6px solid transparent;
+  border-left: 0;
+  background: transparent;
 }
 .state--good{
-  background: var(--card-safe-bg);
-  border-left-color: var(--primary);
+  background: transparent;
 }
 .state--caution{
-  background: var(--card-caution-bg);
-  border-left-color: var(--primary);
+  background: transparent;
 }
 .state--toxic{
-  background: var(--card-toxic-bg);
-  border-left-color: var(--primary);
+  background: transparent;
 }
+.state--good .card__banner{ background: #3B6D11; }
+.state--caution .card__banner{ background: #d3622c; }
+.state--toxic .card__banner{ background: #A32D2D; }
 
 .badge--good,
 .badge--caution,

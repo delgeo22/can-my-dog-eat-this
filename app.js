@@ -18,7 +18,7 @@ const USER_ADDED_FOODS_RAW = String.raw`
 "Cashews"/dog friendly with caution, "Cashews" can be fed in small doses sparingly. Ensure they are unsalted and unflavoured.
 "White fish"/dog friendly, "White fish" is a great low-fat high protein source with lots of omega-3. Serve plain or with dog friendly seasoning and ensure there are no bones. Great for upset tummies.
 "Milk"/dog friendly, Whilst generally dog friendly for those without a lactose allergy, goat's milk is best to serve as it's more easily digestible.
-"Peanut butter"/dog friendly with caution, "Peanut butter" is a tasty safe treat high in protein but also high in fat. Serve sparingly and ensure it is plain unsalted with no added oils or xylitol.
+"Peanut butter"/dog friendly, "Peanut butter" is a tasty safe treat high in protein but also high in fat. Serve sparingly and ensure it is plain unsalted with no added oils or xylitol.
 "Popcorn"/dog friendly with caution, Unsalted, unbuttered, air-popped Popcorn is ok in moderation. Be sure to pop the kernels all the way before serving.
 "Tuna"/dog friendly with caution, Dogs can eat tuna, but only in small amounts. In moderation, cooked, fresh tuna is an excellent source of omega-3 fatty acids, which promote heart and eye health. As for canned tuna, it contains small amounts of mercury and sodium, which should be avoided in excess. A little bit of canned tuna and tuna juice here and there is fine — prepared only in water, not oil — as long as it doesn't contain any spices.
 "Turkey"/dog friendly, Great alternative for those with a chicken allergy. Remove excess skin and fat before serving and ensure there are no bones.
@@ -181,7 +181,7 @@ const BASE_DB = [
   },
   {
     name: "Peanut butter",
-    status: "caution",
+    status: "good",
     explanation:
       "Peanut butter is often fine in small amounts and can be a great treat or pill-hider. Always check the label to ensure it contains no xylitol and avoid varieties with lots of added sugar or salt."
   },
@@ -462,15 +462,12 @@ function renderResult(item) {
   const el = document.getElementById("result");
   el.innerHTML = `
     <article class="card state state--${meta.cls}">
-      <div class="card__top">
-        <h2 class="food">${escapeHtml(item.name)}</h2>
-        <div class="badge badge--${meta.cls}" aria-label="Status: ${meta.label}">
-          <span class="badge__dot" aria-hidden="true"></span>
-          <span>${meta.label}</span>
-        </div>
-      </div>
+      <header class="card__banner">
+        <div class="card__banner-label">${escapeHtml(meta.label.toUpperCase())}</div>
+        <div class="card__banner-food">${escapeHtml(item.name)}</div>
+      </header>
       <div class="card__body">
-        <p>${escapeHtml(item.explanation)}</p>
+        <p class="card__description">${escapeHtml(item.explanation)}</p>
         ${renderEmergencyAlert(item.status)}
         ${renderPromo(item.status)}
       </div>
@@ -498,7 +495,7 @@ function renderPromo(status) {
   return `
     <div class="promo">
       <p class="promo__text">
-        Want to feed your dog something chef-made? Bark & Dine delivers fresh, vet-conscious dog meals in Dubai
+        Want to feed your dog something chef-made? Bark & Dine delivers fresh dog meals in Dubai.
       </p>
       <a
         class="promo__btn"
