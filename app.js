@@ -186,7 +186,7 @@ const BASE_DB = [
       "Peanut butter is often fine in small amounts and can be a great treat or pill-hider. Always check the label to ensure it contains no xylitol and avoid varieties with lots of added sugar or salt."
   },
   {
-    name: "Chicken (plain, cooked)",
+    name: "Chicken",
     status: "good",
     explanation:
       "Plain cooked chicken is generally a dog-friendly protein and is commonly used in bland diets. Skip seasoning, oils, and especially cooked bones, which can splinter."
@@ -282,7 +282,7 @@ const BASE_DB = [
       "Lean protein and generally great for dogs when served plain, fully cooked, and without bones, skin, or heavy seasoning."
   },
   {
-    name: "Sweet potato (plain, cooked)",
+    name: "Sweet Potato",
     status: "good",
     explanation:
       "Rich in fibre and vitamins, and usually dog-safe when cooked plain and served in moderate portions."
