@@ -43,9 +43,17 @@ body{
 
 .brand{
   display:flex;
+  flex-direction: column;
   align-items:center;
-  gap:12px;
+  text-align:center;
+  gap:8px;
   margin-bottom: 14px;
+}
+.brand__text{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  text-align:center;
 }
 .brand__mark{
   width:40px;
@@ -64,7 +72,7 @@ body{
   color: var(--text);
 }
 .brand__subtitle{
-  margin: 2px 0 0;
+  margin: 0;
   color: var(--muted);
   font-size: 13px;
 }
