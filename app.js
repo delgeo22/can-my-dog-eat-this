@@ -198,10 +198,16 @@ const BASE_DB = [
       "Plain cooked rice is usually gentle on a dog’s stomach and is often paired with lean protein for short-term upset tummies. Keep portions modest to avoid excess calories."
   },
   {
-    name: "Eggs (cooked)",
+    name: "Salmon",
     status: "good",
     explanation:
-      "Cooked eggs are typically safe for dogs and are a nutritious source of protein. Avoid raw eggs and keep add-ins like butter, salt, and cheese minimal."
+      "A high-quality protein rich in Omega-3 fatty acids that support skin, coat, and joint health. Salmon must be thoroughly cooked to eliminate harmful parasites and served completely boneless."
+  },
+  {
+    name: "Watermelon",
+    status: "good",
+    explanation:
+      "Consisting of 92% water, Watermelon is an excellent hydrating snack that provides vitamins A, B6 and C. The rind and seeds must be removed."
   },
   {
     name: "Carrots",
