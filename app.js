@@ -388,6 +388,96 @@ const BASE_DB = [
     status: "caution",
     explanation:
       "A nutrient-dense source of plant-based protein, iron and fibre. Lentils must be thoroughly cooked and served plain to be digestible and should be avoided for dogs prone to gas or bloat."
+  },
+  {
+    name: "Brazil Nuts",
+    status: "toxic",
+    explanation:
+      "While not as immediately lethal as macadamia nuts, Brazil Nuts are the highest-fat nut available and can easily trigger acute pancreatitis. They also pose a significant choking hazard and are prone to carrying aflatoxins (mould) which can be harmful to a dog's liver."
+  },
+  {
+    name: "Camel Milk",
+    status: "good",
+    explanation:
+      "Often easier for dogs to digest than cow’s milk, Camel Milk is lower in lactose and higher in protein and vitamin C, making it a great nutritional booster for dogs with slight dairy sensitivities. For a less rich alternative try goat’s milk."
+  },
+  {
+    name: "Truffles",
+    status: "caution",
+    explanation:
+      "Culinary truffles (black or white) are technically safe and non-toxic, but they are extremely rich. They should be used sparingly as a flavour enhancer to avoid digestive upset or obesity."
+  },
+  {
+    name: "Mackerel",
+    status: "good",
+    explanation:
+      "This oily fish is an incredible source of omega-3 fatty acids and Vitamin D; it supports brain health and keeps the coat shiny. Always ensure it is cooked and served boneless."
+  },
+  {
+    name: "Apricot",
+    status: "caution",
+    explanation:
+      "The flesh of an apricot is rich in beta-carotene and potassium, but the pit, stem and leaves contain cyanide and must be strictly avoided."
+  },
+  {
+    name: "Cabbage",
+    status: "good",
+    explanation:
+      "Rich in antioxidants and excellent for digestion; cabbage can be served raw or lightly steamed, but be aware it can cause significant gas if fed in large portions."
+  },
+  {
+    name: "Almond Flour",
+    status: "good",
+    explanation:
+      "A grain-free, gluten-free alternative for dog-friendly baking; Almond Flour provides healthy fats and protein, though it is calorie-dense and should be used in moderation."
+  },
+  {
+    name: "Buckwheat",
+    status: "good",
+    explanation:
+      "Despite the name, Buckwheat is a seed, not a grain, making it gluten-free and safe for dogs with wheat allergies. It is excellent for supporting heart health and blood sugar levels."
+  },
+  {
+    name: "Flaxseeds",
+    status: "good",
+    explanation:
+      "A great source of fibre and essential fatty acids. Flaxseeds should be ground up to ensure the dog can actually absorb the nutrients, as whole seeds often pass through the system undigested."
+  },
+  {
+    name: "Olive Oil",
+    status: "good",
+    explanation:
+      "A rich source of monounsaturated fats and antioxidants that support a healthy immune system and a lustrous coat. It is an excellent nutritional topper, though it should be served in moderation to manage overall calorie intake."
+  },
+  {
+    name: "Parmesan",
+    status: "caution",
+    explanation:
+      "Because it is a hard, aged cheese, Parmesan is naturally lower in lactose than softer cheeses, making it easier to digest. However, it is very high in sodium and should only be used sparingly as a high-value flavour enhancer. Top tip: makes a great topper for fussy kibble eaters or to be used as a high value training treat in small doses."
+  },
+  {
+    name: "Oat Flour",
+    status: "good",
+    explanation:
+      "A wholesome, gluten-free alternative to wheat flour that is packed with fibre, protein and antioxidants. It is an ideal base for creating easily digestible, home-cooked meals or treats for dogs with grain sensitivities."
+  },
+  {
+    name: "Bone Broth",
+    status: "good",
+    explanation:
+      "A nutrient-dense liquid gold for dogs that supports joint health and digestion; it must be prepared without onions, garlic, or excessive salt to remain safe."
+  },
+  {
+    name: "Kelp",
+    status: "good",
+    explanation:
+      "A sea-based superfood rich in iodine and amino acids that supports thyroid function and metabolic health. It should be sourced from clean waters to avoid heavy metal contamination."
+  },
+  {
+    name: "Ghee",
+    status: "caution",
+    explanation:
+      "This clarified butter has had the milk solids (lactose and casein) removed, making it a ‘cleaner’ fat source than standard butter; however, its high-fat density means it should be used very minimally to avoid weight gain."
   }
 ];
 
