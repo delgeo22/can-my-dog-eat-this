@@ -54,7 +54,7 @@ const USER_ADDED_FOODS_RAW = String.raw`
 "Chickpeas (Garbanzo Beans)"/dog friendly with caution: A good source of plant protein and fibre. They must be thoroughly cooked and plain.
 "Chia Seeds"/dog friendly with caution: A powerhouse of Omega-3 fatty acids. However, they absorb a massive amount of water; they should be soaked before serving to prevent them from expanding in the throat or gut.
 "Raspberries"/dog friendly with caution: Contain high levels of antioxidants but also have small amounts of naturally occurring xylitol. Limit intake to a few berries at a time, especially for small breeds.
-"Garlic"/toxic (with nuance): Contains thiosulfates which can cause oxidative damage to red blood cells, leading to anemia. While small, controlled amounts are used in some commercial pet supplements for heart health or flea prevention, household garlic (raw, cooked, or powdered) is significantly more concentrated. It is safest to categorize it as toxic for general database purposes due to the high risk of improper dosing.
+"Garlic"/dog friendly with caution, Garlic contains thiosulfates which can cause oxidative damage to red blood cells in large amounts, and some breeds like Akitas and Shiba Inus are more sensitive. However, small controlled amounts are used in pet supplements for heart health and flea prevention. If feeding intentionally: use 1 small clove per 15–20kg of body weight a few times per week, always crushed and rested for 10 minutes before serving to activate the beneficial compounds. Avoid altogether for pregnant dogs. When in doubt, consult your vet before feeding.
 "Dragon Fruit"/dog friendly: A nutrient-dense, non-toxic exotic fruit. It is high in fibre and vitamin C, which supports the immune system. Only serve the soft flesh.
 "Blackberries"/dog friendly: Low in sugar and loaded with antioxidants, fibre and vitamin C. They are excellent for brain health in aging dogs.
 "Kiwi"/dog friendly with caution: High in vitamin C and potassium. However, the skin and seeds contain high amounts of fibre that can cause digestive upset; it is best served peeled and in small quantities.
@@ -145,9 +145,9 @@ const BASE_DB = [
   },
   {
     name: "Garlic",
-    status: "toxic",
+    status: "caution",
     explanation:
-      "Garlic is in the allium family and can cause red blood cell damage in dogs. Small crumbs are less likely to be serious, but ingestion beyond a taste warrants veterinary guidance."
+      "Garlic contains thiosulfates which can cause oxidative damage to red blood cells in large amounts, and some breeds like Akitas and Shiba Inus are more sensitive. However, small controlled amounts are used in pet supplements for heart health and flea prevention. If feeding intentionally: use 1 small clove per 15–20kg of body weight a few times per week, always crushed and rested for 10 minutes before serving to activate the beneficial compounds. Avoid altogether for pregnant dogs. When in doubt, consult your vet before feeding."
   },
   {
     name: "Xylitol",
