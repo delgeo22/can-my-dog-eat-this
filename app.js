@@ -478,6 +478,24 @@ const BASE_DB = [
     status: "caution",
     explanation:
       "This clarified butter has had the milk solids (lactose and casein) removed, making it a ‘cleaner’ fat source than standard butter; however, its high-fat density means it should be used very minimally to avoid weight gain."
+  },
+  {
+    name: "Peaches",
+    status: "good",
+    explanation:
+      "Fresh, plain peaches in moderation are a good source of vitamins A and C, antioxidants and fibre. Make sure the pit is always removed."
+  },
+  {
+    name: "Goji Berries",
+    status: "caution",
+    explanation:
+      "Known as a superfood, rich in antioxidants and vitamins A, C and E; Goji Berries should only be fed in small amounts as they can have a mild laxative effect if over-consumed."
+  },
+  {
+    name: "Butternut Squash",
+    status: "good",
+    explanation:
+      "High in potassium and vitamin A, which supports heart and eye health Butternut Squash must be cooked and the skin and seeds removed before serving to ensure it is easy to digest."
   }
 ];
 
